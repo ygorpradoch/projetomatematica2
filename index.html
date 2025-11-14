@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Início -->
+    <div id="start-screen">
+        <h1>Matrix Puzzle Game</h1>
+        <p>Um desafio de Matemática Discreta</p>
+        <button id="start-game-btn">Começar o Jogo!</button>
+    </div>
+
+    <!-- Container do Jogo -->
+    <div class="container" id="game-container">
+        <!-- Informações do Jogo -->
+        <div class="game-info">
+            <div>Movimentos: <span id="moves-count">0</span></div>
+            <button id="undo-move-btn" disabled>Desfazer</button>
+            <button id="reset-game">Novo Jogo</button>
+        </div>
+
+        <!-- Área das Matrizes -->
+        <div class="matrix-display-area">
+            <!-- Matriz Atual -->
+            <div class="matrix-card">
+                <h3>Matriz Atual</h3>
+                <table id="current-matrix" class="matrix-table"></table>
+            </div>
+
+            <!-- Matriz Objetivo -->
+            <div class="matrix-card">
+                <h3>Matriz Objetivo</h3>
+                <table id="target-matrix" class="matrix-table"></table>
+            </div>
+        </div>
+
+        <!-- Área de Operações -->
+        <div class="operations-area">
+            <h2>Operações:</h2>
+            <div class="operation-buttons">
+                <button id="op-swap-rows">Trocar Linhas</button>
+                <button id="op-add-rows">Somar Linhas</button>
+                <button id="op-multiply-row">Multiplicar Linha</button>
+                <button id="op-transpose" disabled>Transpor Matriz (v2)</button>
+            </div>
+            <div id="operation-controls"></div>
+        </div>
+
+        <!-- Área de Mensagem -->
+        <div id="game-message"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
